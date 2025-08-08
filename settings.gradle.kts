@@ -5,6 +5,7 @@ dependencyResolutionManagement {
     repositories {
         mavenCentral()
         maven("https://maven-central.storage.googleapis.com/maven2/")
+        maven("https://central.sonatype.com/repository/maven-snapshots")
     }
 }
 
