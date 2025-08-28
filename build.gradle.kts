@@ -1,6 +1,5 @@
 plugins {
     kotlin("jvm") version "2.2.0"
-    kotlin("plugin.serialization") version "2.2.0"
     application
 }
 
@@ -12,11 +11,10 @@ kotlin {
 }
 
 dependencies {
-    implementation("io.modelcontextprotocol.sdk:mcp:0.11.1")
-    implementation("org.springaicommunity:mcp-annotations:0.2.0-SNAPSHOT")
+    implementation("io.modelcontextprotocol.sdk:mcp:0.11.3")
+    implementation("org.springaicommunity:mcp-annotations:0.2.0")
     implementation("org.eclipse.jetty:jetty-server:11.0.18")
     implementation("org.eclipse.jetty:jetty-servlet:11.0.18")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     runtimeOnly("org.slf4j:slf4j-simple:2.0.9")
 }
 

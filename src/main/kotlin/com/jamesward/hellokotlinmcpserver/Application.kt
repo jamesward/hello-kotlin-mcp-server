@@ -10,6 +10,7 @@ import org.eclipse.jetty.servlet.ServletContextHandler
 import org.eclipse.jetty.servlet.ServletHolder
 import org.springaicommunity.mcp.annotation.McpTool
 import org.springaicommunity.mcp.annotation.McpToolParam
+import org.springaicommunity.mcp.provider.tool.SyncStatelessMcpToolProvider
 
 data class Employee(val name: String, val skills: List<String>)
 
@@ -34,7 +35,8 @@ object MyTools {
 fun main() {
     val transportProvider = HttpServletStatelessServerTransport.builder().objectMapper(ObjectMapper()).build()
 
-    val toolSpecifications: List<McpStatelessServerFeatures.SyncToolSpecification> = StatelessMcpToolProvider(listOf(MyTools)).toolSpecifications
+    val toolSpecifications: List<McpStatelessServerFeatures.SyncToolSpecification> =
+        SyncStatelessMcpToolProvider(listOf(MyTools)).toolSpecifications
 
     val syncServer = McpServer.sync(transportProvider)
         .serverInfo("hello-kotlin-mcp-server", "0.0.1")
