@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.2.0"
+    kotlin("jvm") version "2.2.20"
     application
 }
 
@@ -11,8 +11,8 @@ kotlin {
 }
 
 dependencies {
-    implementation("io.modelcontextprotocol.sdk:mcp:0.11.3")
-    implementation("org.springaicommunity:mcp-annotations:0.2.0")
+    implementation("io.modelcontextprotocol.sdk:mcp:0.13.0")
+    implementation("org.springaicommunity:mcp-annotations:0.4.0")
     implementation("org.eclipse.jetty:jetty-server:11.0.18")
     implementation("org.eclipse.jetty:jetty-servlet:11.0.18")
     runtimeOnly("org.slf4j:slf4j-simple:2.0.9")

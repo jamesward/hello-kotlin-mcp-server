@@ -1,6 +1,7 @@
 package com.jamesward.hellokotlinmcpserver
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import io.modelcontextprotocol.json.McpJsonMapper
 import io.modelcontextprotocol.server.McpServer
 import io.modelcontextprotocol.server.McpStatelessServerFeatures
 import io.modelcontextprotocol.server.transport.HttpServletStatelessServerTransport
@@ -33,7 +34,8 @@ object MyTools {
 }
 
 fun main() {
-    val transportProvider = HttpServletStatelessServerTransport.builder().objectMapper(ObjectMapper()).build()
+    val jsonMapper = McpJsonMapper.getDefault()
+    val transportProvider = HttpServletStatelessServerTransport.builder().jsonMapper(jsonMapper).build()
 
     val toolSpecifications: List<McpStatelessServerFeatures.SyncToolSpecification> =
         SyncStatelessMcpToolProvider(listOf(MyTools)).toolSpecifications
