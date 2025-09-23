@@ -1,6 +1,5 @@
 package com.jamesward.hellokotlinmcpserver
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import io.modelcontextprotocol.json.McpJsonMapper
 import io.modelcontextprotocol.server.McpServer
 import io.modelcontextprotocol.server.McpStatelessServerFeatures

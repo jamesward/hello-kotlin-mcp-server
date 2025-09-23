@@ -11,7 +11,7 @@ kotlin {
 }
 
 dependencies {
-    implementation("io.modelcontextprotocol.sdk:mcp:0.13.0")
+    implementation("io.modelcontextprotocol.sdk:mcp:0.13.1")
     implementation("org.springaicommunity:mcp-annotations:0.4.0")
     implementation("org.eclipse.jetty:jetty-server:11.0.18")
     implementation("org.eclipse.jetty:jetty-servlet:11.0.18")
